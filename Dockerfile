@@ -6,4 +6,7 @@ ENV PATH="/go/bin:${PATH}"
 RUN apt-get update && \
     apt-get install build-essential -y
 
-CMD ["tail", "-f", "/dev/null"]
+COPY . .
+
+#CMD ["tail", "-f", "/dev/null"]
+CMD ["./main"]
